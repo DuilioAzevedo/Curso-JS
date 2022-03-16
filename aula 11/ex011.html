@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Controle de Entrada de Brasileiros</h1>
+    <label for="nac">Digite sua nacionalidade</label>
+    <input type="text" name="nac" id="nac">
+    <input type="button" value="Verificar" onclick="verifica()">
+    <div id="res"></div>
+
+<script>
+    function verifica(){
+        var pais = document.getElementById('nac')
+        var res = document.getElementById("res")
+        
+        if (pais.value == 'Brasil'){
+            res.innerHTML = 'Brasileiro: Acesso concedido'
+        }else{
+            res.innerHTML = 'Estrangeiro: Acesso negado'
+        }//document.write = `Seu pais de origem é : ${pais}`
+    }
+</script>
+</body>
+</html>
